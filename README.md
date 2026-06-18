@@ -14,8 +14,10 @@ Rehab Center, FL**.
 
 ## Live demo & repo
 
-- **Live app:** _<add your Vercel URL here after deploy>_
-- **Repository:** _<add your GitHub URL here>_
+- **Live app:** https://facility-assessment-app-psi.vercel.app
+- **Repository:** https://github.com/JATAN2703/facility-assessment-report-generator
+
+Try it with the sample target facility — CCN **686123** (Kendall Lakes Healthcare and Rehab Center, FL).
 
 ---
 
