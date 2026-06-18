@@ -61,7 +61,8 @@ function drawBrandBanner(doc: jsPDF, pageWidth: number, y: number): number {
   doc.setTextColor(...PURPLE);
   doc.text(medelite, x, y);
 
-  return y + 10;
+  // Return a baseline well clear of the 22pt wordmark so the title doesn't overlap.
+  return y + 30;
 }
 
 export function generatePdf(data: FacilityData, manual: ManualInputs): void {
@@ -77,12 +78,12 @@ export function generatePdf(data: FacilityData, manual: ManualInputs): void {
   doc.setFontSize(14);
   doc.setTextColor(...INK);
   doc.text("FACILITY ASSESSMENT SNAPSHOT", pageWidth / 2, y, { align: "center" });
-  y += 18;
+  y += 20;
 
   // Dynamic state abbreviation
   doc.setFontSize(12);
   doc.text(data.state || "—", pageWidth / 2, y, { align: "center" });
-  y += 14;
+  y += 16;
 
   const rows = buildReportRows(data, manual);
   const body = rows.map((r) => [r.label, r.value]);
